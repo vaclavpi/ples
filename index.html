@@ -7,73 +7,142 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Telegram&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="icon" href="gc_logo.svg">
 </head>
 <body>
     <!-- Třpytkové pozadí -->
     <div id="particles-js"></div>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <img src="Návrh bez názvu.svg" alt="Logo Gymnázia" class="logo">
-            <h1>Maturitní ples IV.A</h1>
-            <p>Kulturní dům Milovice | 24. ledna 2025 od 18:00</p>
+ <!-- Header -->
+ <header class="header">
+    <div class="header-content">
+        <img src="gc_logo.svg" alt="Logo Gymnázia" class="logo">
+        <h1>Maturitní ples IV.A</h1>
+        <p>Kulturní dům Milovice | 24. ledna 2025 od 18:00</p>
+        <div class="buttons">
+            <a href="#countdown-section" class="btn">Odpočet</a>
+            <a href="#program" class="btn">Program</a>
+            <a href="#tickets" class="btn">Lístky</a>
+            <a href="#gdpr" class="btn">GDPR</a>
+            <a href="#sponzors" class="btn">Sponzoři</a>
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- Countdown Sekce -->
-    <section id="countdown-section">
-        <h2>Začátek plesu za:</h2>
-        <div id="countdown">
-            <div class="circle" id="days">
-                <span class="number" id="days-text">0</span>
-                <span class="label">Dny</span>
+<!-- Countdown Sekce -->
+<section id="countdown-section">
+    <h2>Začátek plesu za:</h2>
+    <div id="countdown">
+        <div class="circle" id="days">
+            <span class="number" id="days-text">0</span>
+            <span class="label">Dny</span>
+        </div>
+        <div class="circle" id="hours">
+            <span class="number" id="hours-text">0</span>
+            <span class="label">Hodiny</span>
+        </div>
+        <div class="circle" id="minutes">
+            <span class="number" id="minutes-text">0</span>
+            <span class="label">Minuty</span>
+        </div>
+        <div class="circle" id="seconds">
+            <span class="number" id="seconds-text">0</span>
+            <span class="label">Sekundy</span>
+        </div>
+    </div>
+</section>
+
+<!-- Program Plesu -->
+<section id="program">
+    <h2>Program večera</h2>
+    <div class="program-block">
+        <h3>18:00 - Zahájení a přivítání hostů</h3>
+    </div>
+    <div class="program-block">
+        <h3>19:30 - Slavnostní tanec maturantů</h3>
+    </div>
+    <div class="program-block">
+        <h3>21:00 - Losování tomboly s hodnotnými cenami</h3>
+    </div>
+    <div class="program-block">
+        <h3>23:00 - Afterparty s DJ</h3>
+    </div>
+</section>
+
+<!-- Sekce o Lístcích -->
+<section id="tickets">
+    <h2>Koupě lístků</h2>
+    <p>Lístky si lze zakoupit kdykoliv, během našich vyučovacích hodin na gymnáziu.</p>
+    <p>Také je možnost nás požádat prostřednictvím e-mailu <a href="mailto:vaclav.pisinger@gcelakovice.cz">vaclav.pisinger@gcelakovice.cz</a> o rezervaci, koupi a následné předání lístků dle domluvy.</p>
+    <br><br><br>
+    <p>Lístek - sezení: 350 Kč/osoba</p>
+    <p>Lístek - sezení dobrovolné vyšší: 500 Kč/osoba</p>
+    <p>Lístek - stání: 200 Kč/osoba</p>
+    <br>
+    <p>V ceně lístku není afterparty. Ta navíc stojí 200 Kč pro osobu.</p>
+    <br>
+    <p style="font-size: 1em;">Každá jedna vstupenka platí pouze pro jednu osobu. Oprávněné osoby jsou nuceny odmítnout vstup hostům, kteří porušují pravidla akce nebo vstupenku nemají. 
+
+        Vstupenky nelze za žádných okolností vrátit, s výjimkou zrušení akce.
+        Nemluvňata nebo děti bez vstupenek nebudou přijaty, pokud se pořadatel nedohodl jinak.
+        Pořadatel/majitel místa může akci odložit, zrušit, přerušit nebo zastavit z důvodu události vyšší moci. V takovém případě účastníkům akce nenáleží žádná vratka peněz.</p>
+</section>
+
+<!-- GDPR -->
+<section id="gdpr">
+    <h2>GDPR a focení na plese</h2>
+    <p>Účastí na akci a jejích součástech souhlasíte s tím, že během akce může dojít k audiovizuálnímu zachycení Vaší podoby. Pořadatel a firmy, se kterými má pořadatel (zastoupen Václavem Pisingerem) uzavřenou smlouvu či jinou dohodu si vyhrazují právo využít tyto audiovizuální zachycení a jeho části ke své vlastní propagaci na webových stránkách a profilech na sociálních sítích.  </p>
+</section>
+
+<!-- Sponzoři  -->
+<section id="sponzors">
+    <h2>Sponzoři a přispěvatelé</h2>
+    <p>Naši akci, krom všech, kteří si zakoupili lístek také podpořili nejrůznější firmy  a další osoby. Děkujeme jim! Zde je máte:</p>
+
+    <section id="sponsors">
+<div class="sponsors-grid">
+            <div class="sponsor">
+                <a href="https://www.kdmilovice.cz/"><img src="sponsors/kdmilovice.svg" alt="Kulturní dům Milovice"></a>
             </div>
-            <div class="circle" id="hours">
-                <span class="number" id="hours-text">0</span>
-                <span class="label">Hodiny</span>
+            <div class="sponsor">
+                <a href="TAJNE!!!"><img src="sponsors/anonym.svg" alt="Sponzor si nepřeje být uveden."></a>
             </div>
-            <div class="circle" id="minutes">
-                <span class="number" id="minutes-text">0</span>
-                <span class="label">Minuty</span>
-            </div>
-            <div class="circle" id="seconds">
-                <span class="number" id="seconds-text">0</span>
-                <span class="label">Sekundy</span>
+            <div class="sponsor">
+                <a href="https://mirakulum.cz/"><img src="sponsors/mirakulum.svg" alt="Park Mirakulum"></a>
             </div>
         </div>
     </section>
+</section>
 
-    <!-- Program Plesu -->
-    <section id="program">
-        <h2>Program večera</h2>
-        <ul>
-            <li>18:00 - Zahájení a přivítání hostů</li>
-            <li>19:30 - Slavnostní tanec maturantů</li>
-            <li>21:00 - Losování tomboly s hodnotnými cenami</li>
-            <li>23:00 - Afterparty s DJ</li>
-        </ul>
-    </section>
+<!-- Footer -->
+<footer>
+    <br><br><br><br><br><br><br><br>
+    <p>&copy; 2025 IV.A Gymnázium Čelákovice (zastoupena Václavem Pisingerem)</p>
+</footer>
 
-    <!-- Sekce o Lístcích -->
-    <section id="tickets">
-        <h2>Koupě lístků</h2>
-        <p>Pro rezervaci lístků nás kontaktujte: <a href="mailto:vaclav.pisinger@gcelakovice.cz">vaclav.pisinger@gcelakovice.cz</a></p>
-        <p>Cena lístku: 250 Kč/osoba</p>
-    </section>
-
-    <!-- GDPR a Fotografie -->
-    <section id="gdpr">
-        <h2>GDPR a focení na plese</h2>
-        <p>V průběhu plesu budou pořizovány fotografie a videa, které mohou být zveřejněny na webových stránkách školy a sociálních sítích. Pokud nechcete být na těchto materiálech zachyceni, prosím informujte nás před zahájením akce.</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 IV.A Gymnázium Čelákovice | Všechna práva vyhrazena</p>
-    </footer>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('section').forEach((section) => {
+    section.style.opacity = 0;
+    section.style.transform = 'translateY(50px)';
+});
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+            entry.target.style.transition = 'opacity 0.6s, transform 0.6s';
+        }
+    });
+});
+
+document.querySelectorAll('section').forEach((section) => {
+    observer.observe(section);
+});
+
+    </script>
 </body>
 </html>

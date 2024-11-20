@@ -9,63 +9,141 @@
     font-family: 'Telegram', sans-serif;
     color: #FFE77D;
 }
-
-body {
+body, html {
     background-color: #600000;
+    font-family: 'Telegram', sans-serif;
+    color: #FFE77D;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 h1, h2 {
     font-family: 'Abril Fatface', cursive;
     color: #FFE77D;
 }
-
+/* Particles.js */
 #particles-js {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1; /* Zůstává na pozadí */
+    background-color: #600000;
 }
 
-.header {
+/* Header */
+header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 80px 20px;
-    background: none;
+    z-index: 1;
+    color: #FFE77D;
 }
 
-.header-content h1 {
-    font-size: 2.8em;
-    margin-bottom: 10px;
-}
-
-.header-content p {
-    font-size: 1.2em;
-    color: #CEBB67;
+header .header-content {
+    max-width: 1000px;
 }
 
 .logo {
-    width: 140px;
+    width: 200px; /* Šířka loga - můžeš zvětšit podle potřeby */
+    height: auto; /* Zachová poměr stran */
+    margin-bottom: 20px; /* Mezera pod logem, aby se text neposunul příliš blízko */
+}
+header h1 {
+    font-size: 6em;
+    margin: 0;
+    font-family: 'Abril Fatface', cursive;
+}
+
+header p {
+    font-size: 2.5em;
+    margin: 10px 0 20px;
+    font-weight: 300;
+}
+
+header .buttons {
+    margin-top: 50px;
+}
+
+header .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.26);
+    color: #FFE77D;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #FFE77D;
+    transition: all 0.3s ease-in-out;
+}
+
+header .btn:hover {
+    background-color: #FFE77D;
+    color: #600000;
+    border-color: #600000;
+}
+
+header .logo {
+    width: 180px;
     height: auto;
     margin-bottom: 10px;
 }
 
+
+h2{
+    font-size: 3.5em;
+    margin: 1em;
+    font-family: 'Abril Fatface', cursive;
+}
+
+p{
+    font-size: 1.5em;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+
 #countdown-section {
     text-align: center;
     padding: 50px 20px;
+    z-index: 2;
+    position: relative;
 }
 
 #countdown {
     display: flex;
+    position: relative;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    z-index: 2;
 }
+
+.number {
+    animation: pulse 1s infinite;
+}
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
 
 .circle {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: #CEBB67;
+    background: #ffe77db0;
     color: #600000;
     display: flex;
     align-items: center;
@@ -76,16 +154,20 @@ h1, h2 {
 
 .circle .number {
     font-size: 1.5em;
+    color: #600000;
 }
 
 .circle .label {
     font-size: 0.8em;
+    color: #600000;
 }
 
 section {
     text-align: center;
     padding: 30px 20px;
     margin-top: 20px;
+    z-index: 2;
+    position: relative;
 }
 
 ul {
@@ -98,6 +180,8 @@ footer {
     background: #600000;
     color: #CEBB67;
     font-size: 0.9em;
+    z-index: 2;
+    position: relative;
 }
 
 a {
@@ -113,4 +197,53 @@ a {
     .header-content h1 {
         font-size: 2.2em;
     }
+}
+
+
+#program {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.program-block {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #ffe77db0;
+    border-radius: 8px;
+}
+
+.program-block h3 {
+    font-size: 1.5em;
+    color: #600000;
+
+}
+
+/* Sekce pro sponzory */
+#sponsors {
+    padding: 50px 20px;
+    text-align: center;
+    color: #FFE77D;
+}
+
+#sponsors h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-family: 'Abril Fatface', cursive;
+}
+
+/* Flexibilní grid pro sponzory */
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Automatické přizpůsobení sloupců */
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Styly pro jednotlivé loga sponzorů */
+.sponsor img {
+    max-width: auto;
+    height: 100px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
