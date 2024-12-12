@@ -236,19 +236,21 @@ a {
 
 /* Flexibilní grid pro sponzory */
 .sponsors-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Automatické přizpůsobení sloupců */
+    display: flex;
     gap: 20px;
-    justify-items: center;
+    flex-direction: column; /* Řazení do sloupce */
+    align-items: center; /* Zarovnání obrázků na střed */
 }
 
 /* Styly pro jednotlivé loga sponzorů */
 .sponsor img {
-    max-width: auto;
+    width: 100px;
     height: 100px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+
+
 
 
 
@@ -272,3 +274,32 @@ a {
         font-family: 'Telegram', sans-serif;
     }
 }
+
+/* Kontejner pro responzivní iframe */
+.responsive-iframe-container {
+    position: relative; /* Pro absolutní umístění iframe uvnitř */
+    width: 100%; /* Výchozí šířka pro menší obrazovky */
+    max-width: 700px; /* Maximální šířka iframe na velkých obrazovkách */
+    margin: 0 auto; /* Horizontální centrování na velkých obrazovkách */
+    padding-bottom: 45%; /* Poměr stran 700px x 466px */
+    height: 0; /* Výška se odvozuje z padding-bottom */
+    overflow: hidden; /* Skryje obsah, který přesahuje */
+}
+
+.responsive-iframe-container iframe {
+    position: absolute; /* Absolutní umístění uvnitř kontejneru */
+    top: 0;
+    left: 0;
+    width: 100%; /* Iframe se přizpůsobí šířce kontejneru */
+    height: 100%; /* Iframe se přizpůsobí výšce kontejneru */
+    border: none; /* Skryje rámeček iframe */
+}
+
+/* Media queries pro větší obrazovky */
+@media (min-width: 1024px) {
+    .responsive-iframe-container {
+        width: 90%; /* Omezí šířku iframe na 90% stránky */
+        max-width: 700px; /* Maximální šířka na velkých obrazovkách */
+    }
+}
+
