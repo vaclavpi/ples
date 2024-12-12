@@ -244,8 +244,8 @@ a {
 
 /* Styly pro jednotlivé loga sponzorů */
 .sponsor img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
